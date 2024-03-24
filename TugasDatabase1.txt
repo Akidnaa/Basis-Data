@@ -1,0 +1,49 @@
+MariaDB [dbcollege]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| dbcollege          |
+| dbti02             |
+| dbtoko             |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+8 rows in set (0.001 sec)
+
+MariaDB [dbcollege]> DESC Mahasiswa;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nim       | int(11)      | NO   |     | NULL    |                |
+| nama      | varchar(30)  | NO   | UNI | NULL    |                |
+| alamat    | varchar(69)  | NO   |     | NULL    |                |
+| idjurusan | int(11)      | NO   |     | NULL    |                |
+| foto      | varchar(500) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+6 rows in set (0.006 sec)
+
+MariaDB [dbcollege]> DESC Jurusan;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| nama  | varchar(30) | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+2 rows in set (0.005 sec)
+
+MariaDB [dbcollege]> SELECT* FROM Mahasiswa;
++----+-----------+------------------------+-----------------+-----------+----------------+
+| id | nim       | nama                   | alamat          | idjurusan | foto           |
++----+-----------+------------------------+-----------------+-----------+----------------+
+|  1 | 110223053 | Muhammad Andhika Thata | Jln. R.H Panji  |         1 | lmao.jpg       |
+|  2 | 110223076 | Aria Dillah            | Kampung Samprok |         1 | Aria.jpg       |
+|  3 | 110223069 | Mahdi Saputri          | Devok           |         5 | ImanMahdi.jpg  |
+|  4 | 110223078 | Fajar Muhamad          | Gunung Putri    |         4 | pakboi.jpg     |
+|  5 | 110223074 | Aditya Febriadi        | Kota Depok      |         2 | Heathcliff.jpg |
+|  6 | 110233022 | Amba Acumalaka         | Ngawi Village   |         3 | Jmk48.jpg      |
++----+-----------+------------------------+-----------------+-----------+----------------+
+6 rows in set (0.004 sec)
